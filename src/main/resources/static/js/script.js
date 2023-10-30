@@ -24,27 +24,23 @@ async function fetchData() {
 
 
 function inserirDados(data) {
-// Crie um elemento de parágrafo
-var h1 = document.createElement("h1");
-var h4 = document.createElement("h4");
-var p = document.createElement("p");
+const elemento = `
+    <div _id='${data.idProduto}' class='container-produto'>
+        <div class='item-produto'>${data.nome}</div>
+        <div class='item-produto'>${data.valor}</div>
+        <div class='item-produto'>${data.qtde}</div>
+    </div>
+`; 
 
-// Preencha o parágrafo com a propriedade 'nome' do objeto data
-var produtoNome = document.createTextNode(data.nome);
-var produtoPreco = document.createTextNode(data.valor);
-var produtoQtd = document.createTextNode(data.qtde);
-h1.appendChild(produtoNome);
-p.appendChild(produtoPreco);
-h4.appendChild(produtoQtd);
+
 
 // Anexe o parágrafo ao corpo do documento HTML
 // document.body.appendChild(paragrafo);
 
 var divProduto = document.querySelector(".produto-lista");
-divProduto.appendChild(h1);
-divProduto.appendChild(h4);
-divProduto.appendChild(p);
+divProduto.insertAdjacentHTML('afterbegin',elemento);
 }
+
 
 
 fetchData()
