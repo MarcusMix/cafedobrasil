@@ -26,7 +26,6 @@ public class Venda {
     @Column (nullable = false)
     private Date data_venda;
 
-    @Column (nullable = false)
     private Date data_cancelamento;
 
     @Column (nullable = false)
