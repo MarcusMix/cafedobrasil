@@ -9,6 +9,18 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    
+}
+
+.container-produto {
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-right: 15px;
+}
+
+.container-produto h1, h3 {
+    margin: 15px
 }
 

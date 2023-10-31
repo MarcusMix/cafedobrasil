@@ -26,9 +26,9 @@ async function fetchData() {
 function inserirDados(data) {
 const elemento = `
     <div _id='${data.idProduto}' class='container-produto'>
-        <div class='item-produto'>${data.nome}</div>
-        <div class='item-produto'>${data.valor}</div>
-        <div class='item-produto'>${data.qtde}</div>
+        <h1>${data.nome}</h1>
+        <h3>${data.valor}</h3>
+        <h3>${data.qtde}</h3>
     </div>
 `; 
 
